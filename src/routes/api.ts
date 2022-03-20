@@ -6,7 +6,6 @@ const router = Router();
 router.get('/ping', ApiController.ping);
 router.get('/random', ApiController.random);
 router.get('/nome/:nome', ApiController.nome);
-
 router.post('/carros', ApiController.createCars);
 router.get('/carros', ApiController.listCars);
 router.get('/carros/aleatoria', ApiController.ramdomCars);
