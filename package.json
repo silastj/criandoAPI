@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "estudos b7web",
   "main": "index.js",
+  "engines": {
+    "node": "16.0.0"
+    },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -e ts,json src/server.ts"
+    "start-dev": "nodemon -e ts,json src/server.ts",
+    "start": "node index"
   },
   "repository": {
     "type": "git",
