@@ -91,6 +91,7 @@ server.use(cors({
 - GET/carros/gol - Pegar apenas um carro
 - PUT/carros/gol - Atualizar informações de um carro
 - DELETE/carros/gol - Deletar um carro
+- GET/carros/aleatoria - Pegar carro aleatorio // UMA OBSERVAÇÃO SEMPRE COLOCAR A API ALEATORIA ANTES DO FIXO
 
 ## O PostgreSQL
 - user: postgres

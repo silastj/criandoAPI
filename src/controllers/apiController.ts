@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-
+import  Sequelize from "sequelize";
 import { Cars } from '../models/cars'
 
 export const ping = (req: Request, res: Response) => {
@@ -64,4 +64,17 @@ export const deleteCars = async (req: Request, res: Response) =>{
     
     await Cars.destroy({where: {id} });
     res.json({});
+}
+
+export const ramdomCars = async (req: Request, res: Response) => {
+    let cars = await Cars.findOne({
+        order: [
+            Sequelize.fn('RAND')
+        ]
+    })
+    if(cars){
+        res.json({cars});
+    }else{
+        res.json({error: `Não há frases desse valor ${cars} nosso banco de dados. `})
+    }
 }
