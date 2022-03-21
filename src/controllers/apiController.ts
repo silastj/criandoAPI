@@ -75,6 +75,6 @@ export const ramdomCars = async (req: Request, res: Response) => {
     if(cars){
         res.json({cars});
     }else{
-        res.json({error: `Não há frases desse valor ${cars} nosso banco de dados. `})
+        res.json({error: `Não há frases desse valor no ${cars} nosso banco de dados. `})
     }
 }
